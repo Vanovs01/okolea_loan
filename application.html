@@ -5,86 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loan Application - Okolea Mwananchi</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Okolea Mwananchi</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="application.html">Apply Now</a></li>
-                <li><a href="faqs.html">FAQs</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <a href="index.html" class="logo">Okolea Mwananchi</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="application.html" class="active">Apply Now</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
         <section id="loan-application">
-            <h2>Loan Application</h2>
-            <form id="loanForm" action="submit_form.php" method="POST">
-                <label for="name">Full Name (as per ID):</label><br>
-                <input type="text" id="name" name="name" required><br><br>
+            <div class="container">
+                <h2>Loan Application</h2>
+                <form id="loanForm" action="submit_form.php" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name (as per ID):</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
 
-                <label for="email">Email (Optional):</label><br>
-                <input type="email" id="email" name="email"><br><br>
+                    <div class="form-group">
+                        <label for="email">Email (Optional):</label>
+                        <input type="email" id="email" name="email">
+                    </div>
 
-                <label for="phone">Phone Number (with country code):</label><br>
-                <input type="tel" id="phone" name="phone" required><br><br>
+                    <div class="form-group">
+                        <label for="phone">Phone Number (with country code):</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
 
-                <label for="amount">Loan Amount (KES 3,000 - 200,000 / Approximately $25 - $1,667 USD):</label><br>
-                <input type="number" id="amount" name="amount" min="3000" max="200000" required><br><br>
+                    <div class="form-group">
+                        <label for="amount">Loan Amount (KES 3,000 - 200,000):</label>
+                        <input type="number" id="amount" name="amount" min="3000" max="200000" required>
+                    </div>
 
-                <label for="occupation">Occupation/Business Type:</label><br>
-                <select id="occupation" name="occupation">
-                    <option value="employed">Employed</option>
-                    <option value="self-employed">Self-Employed</option>
-                    <option value="business">Business Owner</option>
-                    <option value="other">Other</option>
-                </select><br><br>
+                    <div class="form-group">
+                        <label for="occupation">Occupation/Business Type:</label>
+                        <select id="occupation" name="occupation">
+                            <option value="employed">Employed</option>
+                            <option value="self-employed">Self-Employed</option>
+                            <option value="business">Business Owner</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
 
-                <label for="loan_type">Type of Loan:</label><br>
-                <select id="loan_type" name="loan_type">
-                    <option value="personal">Personal</option>
-                    <option value="business">Business</option>
-                    <option value="school_fees">School Fees</option>
-                    <option value="hospital">Hospital</option>
-                    <option value="car">Car Loan</option>
-                    <option value="land">Landed Property Loan</option>
-                </select><br><br>
+                    <div class="form-group">
+                        <label for="loan_type">Type of Loan:</label>
+                        <select id="loan_type" name="loan_type">
+                            <option value="personal">Personal</option>
+                            <option value="business">Business</option>
+                            <option value="school_fees">School Fees</option>
+                            <option value="hospital">Hospital</option>
+                            <option value="car">Car Loan</option>
+                            <option value="land">Landed Property Loan</option>
+                        </select>
+                    </div>
 
-                <label for="how_hear">How did you hear about us?:</label><br>
-                <select id="how_hear" name="how_hear">
-                    <option value="tiktok">Tiktok</option>
-                    <option value="google">Google</option>
-                    <option value="facebook">Facebook</option>
-                    <option value="whatsapp">Whatsapp</option>
-                    <option value="friends">Friends/Family</option>
-                    <option value="radio">Radio</option>
-                </select><br><br>
+                    <div class="form-group">
+                        <label for="how_hear">How did you hear about us?:</label>
+                        <select id="how_hear" name="how_hear">
+                            <option value="tiktok">Tiktok</option>
+                            <option value="google">Google</option>
+                            <option value="facebook">Facebook</option>
+                            <option value="whatsapp">Whatsapp</option>
+                            <option value="friends">Friends/Family</option>
+                            <option value="radio">Radio</option>
+                        </select>
+                    </div>
 
-                <input type="checkbox" id="terms" name="terms" required>
-                <label for="terms">I agree to the <a href="terms.html">Loan Terms and Conditions</a></label><br><br>
+                    <div class="form-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the <a href="terms.html">Loan Terms and Conditions</a></label>
+                    </div>
 
-                <input type="submit" value="Submit Application">
-            </form>
+                    <div class="form-group">
+                        <input type="submit" value="Submit Application" class="cta-button">
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Okolea Mwananchi</p>
-            <nav>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms & Conditions</a>
-            </nav>
-            <div class="social-media">
-                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-                <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
-            </div>
-            <div class="company-info">
-                <p>Okolea Mwananchi is a registered financial institution</p>
-                <p>Reg. No: 9952654 | PIN: 423657</p>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Okolea Mwananchi</p>
+                <nav>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                </nav>
+                <div class="social-media">
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                </div>
+                <div class="company-info">
+                    <p>Okolea Mwananchi is a registered financial institution</p>
+                    <p>Reg. No: 9952654 | PIN: 423657</p>
+                </div>
             </div>
             <div class="secured-by">
                 <img src="sectigo-badge.png" alt="Secured by Sectigo">
@@ -95,7 +122,6 @@
     <script>
         document.getElementById('loanForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent actual form submission
-
             // Simulate submission and redirect to thank you page
             window.location.href = 'thank_you.html';
         });

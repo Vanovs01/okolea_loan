@@ -1,24 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQs - Okolea Mwananchi</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Okolea Mwananchi</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="application.html">Apply Now</a></li>
-                <li><a href="faqs.html">FAQs</a></li>
-            </ul>
-        </nav>
-    </header>
+<script>
+    const faqItems = document.querySelectorAll('.faq-item');
 
-    <main>
-        <section id="faqs">
-            <h2>Frequently Asked Questions</h2>
+    faqItems.forEach(item => {
+        item.addEventListener('click', () => {
+            item.classList.toggle('active');
+        });
+    });
+</script>
