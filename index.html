@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for a Loan - Okolea Mwananchi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Apply for a Loan</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="application.html">Apply Now</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="loan-application">
+            <h2>Loan Application Form</h2>
+            <p>Fill out the form below to apply for a loan.</p>
+            <form name="loan-application" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="thank_you.html">
+                <input type="hidden" name="form-name" value="loan-application">
+                
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="amount">Loan Amount (KSh):</label>
+                <input type="number" id="amount" name="amount" required>
+                
+                <label for="purpose">Purpose of Loan:</label>
+                <textarea id="purpose" name="purpose" required></textarea>
+                
+                <button type="submit">Submit Application</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Okolea Mwananchi</p>
+    </footer>
+</body>
+</html>
