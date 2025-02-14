@@ -28,7 +28,10 @@
         <section id="loan-application">
             <div class="container">
                 <h2>Loan Application</h2>
-                <form id="loanForm" name="loanForm" action="/" method="POST">  <input type="hidden" name="form-name" value="loanForm"> <div class="form-group">
+                <form name="loanForm" method="POST" data-netlify="true">
+                    <input type="hidden" name="form-name" value="loanForm">
+                    
+                    <div class="form-group">
                         <label for="name">Full Name (as per ID):</label>
                         <input type="text" id="name" name="name" required>
                     </div>
@@ -88,7 +91,7 @@
                     </div>
 
                     <div class="form-group">
-                        <input type="submit" value="Submit Application" class="cta-button">
+                        <button type="submit" class="cta-button">Submit Application</button>
                     </div>
                 </form>
             </div>
@@ -117,13 +120,5 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        document.getElementById('loanForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent actual form submission
-            // Simulate submission and redirect to thank you page
-            window.location.href = 'thank_you.html';
-        });
-    </script>
 </body>
 </html>
