@@ -1,9 +1,85 @@
-<script>
-    const faqItems = document.querySelectorAll('.faq-item');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Okolea Mwananchi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Okolea Mwananchi</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="application.html">Apply Now</a></li>
+                    <li><a href="faqs.html" class="active">FAQs</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    faqItems.forEach(item => {
-        item.addEventListener('click', () => {
-            item.classList.toggle('active');
+    <main>
+        <section id="faqs">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-item">
+                    <h3>What types of loans do you offer?</h3>
+                    <p>We offer a variety of loan solutions tailored to your needs, including personal loans, business loans, school fees loans, hospital loans, car loans, and land acquisition loans.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What are the eligibility requirements?</h3>
+                    <p>To be eligible for a loan, you must be a Kenyan citizen, at least 18 years old, have a valid M-Pesa account, and meet other criteria as determined by Okolea Mwananchi.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>How do I apply for a loan?</h3>
+                    <p>Applying for a loan is easy! Simply visit our website and click on the "Apply Now" button. Fill out the application form with your details and submit it. We will review your application and get back to you shortly.</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Okolea Mwananchi</p>
+                <nav>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                </nav>
+                <div class="social-media">
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                </div>
+                <div class="company-info">
+                    <p>Okolea Mwananchi is a registered financial institution</p>
+                    <p>Reg. No: 9952654 | PIN: 423657</p>
+                    <p class="nairobi-address">Afya House Room 112, 00100</p>
+                </div>
+            </div>
+            <div class="secured-by">
+                <img src="sectigo-badge.png" alt="Secured by Sectigo">
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
         });
-    });
-</script>
+    </script>
+</body>
+</html>
